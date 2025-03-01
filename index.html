@@ -15,20 +15,24 @@
       </header>
 
       <main>
-        <form id="travel-generator-form">
-          <input
-            type="text"
-            placeholder="Enter the travel destination "
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-
-        <div class="destination" id="travel"></div>
+        <div class="form-container">
+          <form id="travel-generator-form">
+            <input
+              type="text"
+              placeholder="Enter your travel destination "
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">
+            i.e: Maldives, Toronto, New York City, or Florida
+          </div>
+        </div>
+        <div class="destination hidden" id="travel"></div>
       </main>
 
       <footer>
@@ -39,9 +43,9 @@
           href="https://github.com/creed725/travel-generator.git"
           target="_blank"
         >
-         open-sourced on GitHub</a
+          open-sourced on GitHub</a
         >
-        and 
+        and
         <a href="https://ai-explorer-generator.netlify.app/" target="_blank"
           >hosted on Netlify</a
         >.

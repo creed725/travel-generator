@@ -1,5 +1,4 @@
 function displayTravel(response) {
-  console.log("travel generated");
   new Typewriter("#travel", {
     strings: response.data.answer,
     autoStart: true,
@@ -21,10 +20,6 @@ function generateTravel(event) {
   let destinationElement = document.querySelector("#travel");
   destinationElement.classList.remove("hidden");
   destinationElement.innerHTML = `<div class="generating">⏳Generating the travel guide for ${instructionsInput.value}</div>`;
-
-  console.log("Generating travel");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
 
   axios.get(apiURL).then(displayTravel);
 }
